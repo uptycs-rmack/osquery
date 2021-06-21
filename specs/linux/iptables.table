@@ -17,8 +17,8 @@ schema([
     Column("outiface", TEXT, "Output interface for the rule."),
     Column("outiface_mask", TEXT, "Output interface mask for the rule."),
     Column("match", TEXT, "Matching rule that applies."),
-    Column("packets", INTEGER, "Number of matching packets for this rule."),
-    Column("bytes", INTEGER, "Number of matching bytes for this rule."),
+    Column("packets", BIGINT, "Number of matching packets for this rule."),
+    Column("bytes", BIGINT, "Number of matching bytes for this rule."),
 ])
 implementation("iptables@genIptables")
 fuzz_paths([
